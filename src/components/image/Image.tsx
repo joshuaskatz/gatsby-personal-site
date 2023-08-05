@@ -11,7 +11,11 @@ interface ImageProps {
 }
 
 export default function Image({ featuredImage }: ImageProps) {
-  const featuredImg = getImage(featuredImage.childImageSharp.gatsbyImageData);
+  if (!featuredImage) return null;
 
-  return <GatsbyImage image={featuredImg as IGatsbyImageData} alt="alt" />;
+  const featuredImg = getImage(
+    featuredImage.childImageSharp.gatsbyImageData
+  ) as IGatsbyImageData;
+
+  return <GatsbyImage image={featuredImg} alt="alt" />;
 }

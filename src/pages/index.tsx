@@ -1,25 +1,27 @@
 import React, { useMemo } from "react";
 import { Link, type PageProps, graphql, useStaticQuery } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
-import Image from "../content/image/index.mdx";
+import ImageMDX from "../content/image/index.mdx";
+import Image from "../components/image/Image";
 import ImageText from "../components/image/ImageText";
 import ImageLayout from "../components/image/ImageLayout";
-import "../styles/global.css";
 
 import { ImageDataLike } from "gatsby-plugin-image";
+import MainNav from "../components/nav/main";
 
-export const shortcodes = { Link, ImageText, Image };
+const shortcodes = { Link, ImageText, Image };
 
 export const allMdx = graphql`
   query {
-    mdx(fields: { slug: { eq: "/header" } }) {
+    mdx(fields: { slug: { eq: "/about" } }) {
       frontmatter {
         slug
         title
         description
+        sub
         featuredImage {
           childImageSharp {
-            gatsbyImageData(width: 800)
+            gatsbyImageData(width: 900)
           }
         }
       }
@@ -32,6 +34,7 @@ export type ImageMdxNode = {
     slug: string;
     title: string;
     description: string;
+    sub: string;
     featuredImage: {
       childImageSharp: {
         gatsbyImageData: ImageDataLike;
@@ -53,12 +56,17 @@ const Index: React.FC<PageProps> = () => {
 
     return (
       <ImageLayout>
-        <Image {...mdx} />
+        <ImageMDX {...mdx} />
       </ImageLayout>
     );
   }, [allMdxData]);
 
-  return <MDXProvider components={shortcodes}>{header}</MDXProvider>;
+  return (
+    <div>
+      <MainNav />
+      <MDXProvider components={shortcodes}>{header}</MDXProvider>
+    </div>
+  );
 };
 
 export default Index;

@@ -1,6 +1,18 @@
-<Image featuredImage={props.frontmatter.featuredImage} />
+export default function Index({ index=0, ...props }) {
+  if (!props.frontmatter) return null;
 
-<ImageText
-  title={props.frontmatter.title}
-  description={props.frontmatter.description}
-/>
+return (
+
+<div className="flex">
+  <div>
+    <Image featuredImage={props.frontmatter.featuredImage} />
+  </div>
+  <div>
+    <ImageText
+      title={props.frontmatter.title}
+      description={props.frontmatter.description}
+      sub={props.frontmatter.sub}
+    />
+  </div>
+</div>
+); }
