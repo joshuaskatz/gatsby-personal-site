@@ -5,7 +5,6 @@ import * as React from "react";
 import ImageMDX from "../content/image/index.mdx";
 import Image from "../components/image/Image";
 import ImageText from "../components/image/ImageText";
-import ImageLayout from "../components/image/ImageLayout";
 import { MDXProvider } from "@mdx-js/react";
 import MainNav from "../components/nav/main";
 
@@ -43,9 +42,7 @@ const Photography: React.FC<PageProps> = () => {
     if (!allMdxData.allMdx) return null;
 
     return allMdxData.allMdx.nodes.map((props, index: number) => (
-      <ImageLayout key={index}>
-        <ImageMDX {...props} index={index} />
-      </ImageLayout>
+      <ImageMDX {...props} index={index} />
     ));
   }, [allMdxData]);
 

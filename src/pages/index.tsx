@@ -4,7 +4,6 @@ import { MDXProvider } from "@mdx-js/react";
 import ImageMDX from "../content/image/index.mdx";
 import Image from "../components/image/Image";
 import ImageText from "../components/image/ImageText";
-import ImageLayout from "../components/image/ImageLayout";
 
 import { ImageDataLike } from "gatsby-plugin-image";
 import MainNav from "../components/nav/main";
@@ -54,11 +53,7 @@ const Index: React.FC<PageProps> = () => {
   const header = useMemo(() => {
     const mdx = allMdxData.mdx;
 
-    return (
-      <ImageLayout>
-        <ImageMDX {...mdx} />
-      </ImageLayout>
-    );
+    return <ImageMDX {...mdx} />;
   }, [allMdxData]);
 
   return (

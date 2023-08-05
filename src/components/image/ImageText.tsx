@@ -10,7 +10,7 @@ export default function ImageText({
   sub?: string;
 }) {
   return (
-    <div className="ml-5">
+    <div className="ml-2 md:ml-5">
       <div className="text-5xl font-light">{title}</div>
       <div className="text-xl">{description}</div>
       {sub && <div className="text-xl">{sub}</div>}

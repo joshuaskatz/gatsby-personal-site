@@ -3,16 +3,14 @@ export default function Index({ index=0, ...props }) {
 
 return (
 
-<div className="flex">
-  <div>
+<div >
     <Image featuredImage={props.frontmatter.featuredImage} />
-  </div>
-  <div>
+
     <ImageText
       title={props.frontmatter.title}
       description={props.frontmatter.description}
       sub={props.frontmatter.sub}
     />
-  </div>
+
 </div>
 ); }

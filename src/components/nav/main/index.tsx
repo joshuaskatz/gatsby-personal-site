@@ -3,16 +3,12 @@ import { Link } from "gatsby";
 
 export default function MainNav() {
   return (
-    <div>
-      <Link to="/" className="m-3">
-        about
-      </Link>
-      <Link to="/photography" className="m-3">
+    <div className="m-2 md:m-5">
+      <Link to="/">about</Link>
+      <Link to="/photography" className="m-5">
         photography
       </Link>
-      <Link to="/software" className="m-3">
-        software
-      </Link>
+      <Link to="/software">software</Link>
     </div>
   );
 }
