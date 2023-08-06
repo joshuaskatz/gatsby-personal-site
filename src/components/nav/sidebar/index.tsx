@@ -16,7 +16,7 @@ export default function Sidebar({ sections }: { sections: ImageMdxNode[] }) {
   }, [sections]);
 
   return (
-    <div className="justify-end hidden fixed lg:flex flex-col leading-8 pl-5 top-1/3 left-2/3 h-fit border-l border-x-stone-400">
+    <div className="justify-end hidden fixed xl:flex flex-col leading-8 pl-5 top-1/3 left-2/3 h-fit border-l border-x-stone-400">
       {anchorTags}
     </div>
   );

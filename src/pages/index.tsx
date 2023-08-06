@@ -53,7 +53,7 @@ const Index: React.FC<PageProps> = () => {
   const header = useMemo(() => {
     const mdx = allMdxData.mdx;
 
-    return <ImageMDX {...mdx} />;
+    return <ImageMDX className={`flex flex-col lg:flex-row`} {...mdx} />;
   }, [allMdxData]);
 
   return (

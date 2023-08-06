@@ -1,9 +1,9 @@
-export default function Index({ index=0, ...props }) {
+export default function Index({ index=0, className='', ...props }) {
   if (!props.frontmatter) return null;
 
 return (
 
-<div className={props.frontmatter.slug==='about'?'h-600px':'h-fit'} id={`${props.frontmatter.title.replace(' ', '_').toLowerCase()}`}>
+<div className={className} id={`${props.frontmatter.title.replace(' ', '_').toLowerCase()}`}>
     <Image featuredImage={props.frontmatter.featuredImage} />
 
     <ImageText
