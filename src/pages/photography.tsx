@@ -29,11 +29,25 @@ export const allMdx = graphql`
         }
       }
     }
+    mdx(fields: { slug: { eq: "/about" } }) {
+      frontmatter {
+        slug
+        title
+        description
+        sub
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(width: 800)
+          }
+        }
+      }
+    }
   }
 `;
 
 interface ImageMdxQuery {
   allMdx: { nodes: ImageMdxNode[] };
+  mdx: ImageMdxNode;
 }
 
 const Photography: React.FC<PageProps> = () => {
@@ -55,7 +69,10 @@ const Photography: React.FC<PageProps> = () => {
           <MDXProvider components={shortcodes}>{photos}</MDXProvider>
         </div>
         <div>
-          <Sidebar sections={allMdxData.allMdx.nodes} />
+          <Sidebar
+            sections={allMdxData.allMdx.nodes}
+            aboutMdx={allMdxData.mdx}
+          />
         </div>
       </div>
     </div>

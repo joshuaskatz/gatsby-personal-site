@@ -13,7 +13,7 @@ export default function ImageText({
     <div className="ml-2 mb-8 md:ml-5 w-fit">
       <div className="text-5xl font-light">{title}</div>
       <div className="text-xl">{description}</div>
-      {sub && <div className="text-xl">{sub}</div>}
+      {sub && <div className="text-lg">{sub}</div>}
     </div>
   );
 }

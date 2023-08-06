@@ -1,7 +1,15 @@
 import React, { useMemo } from "react";
 import { ImageMdxNode } from "../../../pages";
+import ImageMDX from "../../../content/sidebar/index.mdx";
 
-export default function Sidebar({ sections }: { sections: ImageMdxNode[] }) {
+import Image from "../../image/Image";
+import ImageText from "../../image/ImageText";
+interface SidebarProps {
+  sections: ImageMdxNode[];
+  aboutMdx: ImageMdxNode;
+}
+
+export default function Sidebar({ sections, aboutMdx }: SidebarProps) {
   const anchorTags = useMemo(() => {
     return sections.map((s) => {
       return (
@@ -15,9 +23,17 @@ export default function Sidebar({ sections }: { sections: ImageMdxNode[] }) {
     });
   }, [sections]);
 
+  console.log(aboutMdx);
+
   return (
-    <div className="justify-end hidden fixed xl:flex flex-col leading-8 pl-5 top-1/3 left-2/3 h-fit border-l border-x-stone-400">
-      {anchorTags}
+    <div className="hidden fixed xl:flex justify-center items-center w-1/3 h-full">
+      <div className="h-fit border-l border-x-stone-400 flex leading-8 flex-col pl-5 align-middle">
+        {" "}
+        <div className="w-72 -ml-5 -mb-5">
+          <ImageMDX {...aboutMdx} />
+        </div>
+        {anchorTags}
+      </div>
     </div>
   );
 }

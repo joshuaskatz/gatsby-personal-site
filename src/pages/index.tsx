@@ -59,6 +59,7 @@ const Index: React.FC<PageProps> = () => {
   return (
     <div>
       <MainNav />
+
       <MDXProvider components={shortcodes}>{header}</MDXProvider>
     </div>
   );
