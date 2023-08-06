@@ -7,6 +7,7 @@ import Image from "../components/image/Image";
 import ImageText from "../components/image/ImageText";
 import { MDXProvider } from "@mdx-js/react";
 import MainNav from "../components/nav/main";
+import Sidebar from "../components/nav/sidebar";
 
 const shortcodes = { Link, ImageText, Image };
 
@@ -49,7 +50,14 @@ const Photography: React.FC<PageProps> = () => {
   return (
     <div>
       <MainNav />
-      <MDXProvider components={shortcodes}>{photos}</MDXProvider>
+      <div className="flex flex-row">
+        <div>
+          <MDXProvider components={shortcodes}>{photos}</MDXProvider>
+        </div>
+        <div>
+          <Sidebar sections={allMdxData.allMdx.nodes} />
+        </div>
+      </div>
     </div>
   );
 };

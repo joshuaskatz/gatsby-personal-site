@@ -17,5 +17,9 @@ export default function Image({ featuredImage }: ImageProps) {
     featuredImage.childImageSharp.gatsbyImageData
   ) as IGatsbyImageData;
 
-  return <GatsbyImage className="m-2 md:m-5" image={featuredImg} alt="alt" />;
+  return (
+    <div className="m-2 md:mx-5 w-fit">
+      <GatsbyImage image={featuredImg} alt="alt" />
+    </div>
+  );
 }
