@@ -8,6 +8,6 @@
   html {
     font-family: Source Code Pro, system-ui, sans-serif;
     scroll-behavior: smooth;
-    scroll-padding: 100px;
+    scroll-padding: 10px;
   }
 }

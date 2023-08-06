@@ -20,7 +20,7 @@ export const allMdx = graphql`
         sub
         featuredImage {
           childImageSharp {
-            gatsbyImageData(width: 900)
+            gatsbyImageData(width: 800)
           }
         }
       }

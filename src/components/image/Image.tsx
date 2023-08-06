@@ -18,7 +18,7 @@ export default function Image({ featuredImage }: ImageProps) {
   ) as IGatsbyImageData;
 
   return (
-    <div className="m-2 md:mx-5 w-fit">
+    <div className="m-2 md:mx-5">
       <GatsbyImage image={featuredImg} alt="alt" />
     </div>
   );

@@ -3,7 +3,7 @@ export default function Index({ index=0, ...props }) {
 
 return (
 
-<div id={`${props.frontmatter.title.replace(' ', '_').toLowerCase()}`}>
+<div className={props.frontmatter.slug==='about'?'h-600px':'h-fit'} id={`${props.frontmatter.title.replace(' ', '_').toLowerCase()}`}>
     <Image featuredImage={props.frontmatter.featuredImage} />
 
     <ImageText
