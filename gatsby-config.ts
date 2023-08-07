@@ -1,19 +1,21 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Joshua Katz`,
+    description: 'Photographer and Software Developer',
     siteUrl: `https://www.joshuaskatz.com`,
+    image: '/header.png',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
-    "gatsby-plugin-slug",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-slug',
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -23,7 +25,7 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: 'gatsby-plugin-mdx',
       options: {
         gatsbyRemarkPlugins: [
           {
@@ -34,36 +36,44 @@ const config: GatsbyConfig = {
             },
           },
         ],
-        extensions: [".mdx", ".md", ".markdown"],
+        extensions: ['.mdx', '.md', '.markdown'],
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-mdx-frontmatter",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-mdx-frontmatter',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "content",
-        path: "./src/content/",
+        name: 'content',
+        path: './src/content/',
       },
-      __key: "content",
+      __key: 'content',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'static',
+        path: './static',
       },
-      __key: "pages",
+      __key: 'static',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: './src/pages/',
+      },
+      __key: 'pages',
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -83,10 +93,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,
-        preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
-        ],
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
         web: [
           {
             name: `Source Code Pro`,
@@ -96,6 +103,6 @@ const config: GatsbyConfig = {
       },
     },
   ],
-};
+}
 
-export default config;
+export default config
