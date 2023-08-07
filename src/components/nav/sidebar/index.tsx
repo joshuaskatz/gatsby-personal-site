@@ -25,8 +25,6 @@ export default function Sidebar({ sections, aboutMdx }: SidebarProps) {
     });
   }, [sections]);
 
-  console.log(aboutMdx);
-
   return (
     <div className="hidden fixed xl:flex justify-center items-start mt-2 w-1/3 h-full">
       <div className="h-fit border-l border-x-stone-400 flex leading-8 flex-col pl-5 align-middle">

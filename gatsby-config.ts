@@ -73,6 +73,13 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `static`,
+        path: `${__dirname}/static/`,
+      },
+    },
+    {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,

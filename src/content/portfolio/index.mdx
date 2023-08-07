@@ -8,7 +8,10 @@ export default function Index(props) {
         return (
           <div className="ml-2 mb-8 md:ml-5" key={frontmatter.title}>
             <div className="text-xl">{frontmatter.title}</div>
-            <div className="text-md">{frontmatter.description}</div>
+            <div className="text-md">{frontmatter.website}</div>
+            <div className="text-md">{frontmatter.sub}</div>
+            <ul>{frontmatter.descriptionArray.map((d, i)=><li key={i} className="text-md">{d}</li>)}</ul>
+
           </div>
         );
       },

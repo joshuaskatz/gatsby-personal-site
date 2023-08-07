@@ -25,30 +25,45 @@ export const allMdx = graphql`
         }
       }
     }
+    file(relativePath: { eq: "Joshua_Katz_Resume.pdf" }) {
+      publicURL
+      name
+    }
   }
 `;
+
+export type FeaturedImage = {
+  featuredImage: {
+    childImageSharp: {
+      gatsbyImageData: ImageDataLike;
+    };
+  };
+};
 
 export type ImageMdxNode = {
   frontmatter: {
     slug: string;
     title: string;
     description: string;
-    sub: string;
-    featuredImage: {
-      childImageSharp: {
-        gatsbyImageData: ImageDataLike;
-      };
-    };
+    sub?: string;
+    website?: string;
+    featuredImage: FeaturedImage;
   };
   body: string;
 };
 
+export type MdxFile = {
+  publicUrl: string;
+};
+
 interface ImageMdxQuery {
   mdx: ImageMdxNode;
+  file: MdxFile;
 }
 
 const Index: React.FC<PageProps> = () => {
   const allMdxData = useStaticQuery<ImageMdxQuery>(allMdx);
+  console.log(allMdxData);
 
   const header = useMemo(() => {
     const mdx = allMdxData.mdx;
@@ -58,7 +73,7 @@ const Index: React.FC<PageProps> = () => {
 
   return (
     <div>
-      <MainNav />
+      <MainNav publicUrl={allMdxData.file.publicUrl} />
 
       <MDXProvider components={shortcodes}>{header}</MDXProvider>
     </div>

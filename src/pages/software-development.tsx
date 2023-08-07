@@ -4,7 +4,7 @@ import MainNav from "../components/nav/main";
 import Sidebar from "../components/nav/sidebar";
 import Image from "../components/image/Image";
 import ImageText from "../components/image/ImageText";
-import { ImageMdxNode } from ".";
+import { ImageMdxNode, MdxFile } from ".";
 import Technologies from "../content/technologies/index.mdx";
 import Portfolio from "../content/portfolio/index.mdx";
 
@@ -23,7 +23,10 @@ export const allMdx = graphql`
         frontmatter {
           slug
           title
+          website
+          sub
           description
+          descriptionArray
         }
       }
     }
@@ -41,20 +44,25 @@ export const allMdx = graphql`
         }
       }
     }
+    file(relativePath: { eq: "Joshua_Katz_Resume.pdf" }) {
+      publicURL
+      name
+    }
   }
 `;
 
 interface ImageMdxQuery {
   allMdx: { nodes: ImageMdxNode[] };
   mdx: ImageMdxNode;
+  file: MdxFile;
 }
 
 const SoftwareDev: React.FC<PageProps> = () => {
   const allMdxData = useStaticQuery<ImageMdxQuery>(allMdx);
-
+  console.log(allMdxData);
   return (
     <div>
-      <MainNav />
+      <MainNav publicUrl={allMdxData.file.publicUrl} />
       <div className="flex flex-row ">
         <div className="w-940">
           <MDXProvider components={shortcodes}>

@@ -1,5 +1,5 @@
 import { Link, PageProps, graphql, useStaticQuery } from "gatsby";
-import { ImageMdxNode } from ".";
+import { ImageMdxNode, MdxFile } from ".";
 import { useMemo } from "react";
 import * as React from "react";
 import ImageMDX from "../content/image/index.mdx";
@@ -42,12 +42,17 @@ export const allMdx = graphql`
         }
       }
     }
+    file(relativePath: { eq: "Joshua_Katz_Resume.pdf" }) {
+      publicURL
+      name
+    }
   }
 `;
 
 interface ImageMdxQuery {
   allMdx: { nodes: ImageMdxNode[] };
   mdx: ImageMdxNode;
+  file: MdxFile;
 }
 
 const Photography: React.FC<PageProps> = () => {
@@ -63,7 +68,7 @@ const Photography: React.FC<PageProps> = () => {
 
   return (
     <div>
-      <MainNav />
+      <MainNav publicUrl={allMdxData.file.publicUrl} />
       <div className="flex flex-row">
         <div className="max-w-940">
           <MDXProvider components={shortcodes}>{photos}</MDXProvider>
