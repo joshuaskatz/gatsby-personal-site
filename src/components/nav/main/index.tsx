@@ -8,7 +8,7 @@ export default function MainNav() {
       <Link to="/photography" className="m-5">
         photography
       </Link>
-      {/* <Link to="/software">software</Link> */}
+      <Link to="/software-development">software development</Link>
     </div>
   );
 }

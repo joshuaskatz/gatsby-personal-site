@@ -23,7 +23,7 @@ export const allMdx = graphql`
           sub
           featuredImage {
             childImageSharp {
-              gatsbyImageData(width: 800)
+              gatsbyImageData(width: 900)
             }
           }
         }
@@ -65,12 +65,12 @@ const Photography: React.FC<PageProps> = () => {
     <div>
       <MainNav />
       <div className="flex flex-row">
-        <div>
+        <div className="max-w-940">
           <MDXProvider components={shortcodes}>{photos}</MDXProvider>
         </div>
         <div>
           <Sidebar
-            sections={allMdxData.allMdx.nodes}
+            sections={allMdxData.allMdx.nodes.map((n) => n.frontmatter.title)}
             aboutMdx={allMdxData.mdx}
           />
         </div>

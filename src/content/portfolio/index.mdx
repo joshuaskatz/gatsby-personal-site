@@ -1,0 +1,21 @@
+import SoftwareSection from "../../components/software";
+
+export default function Index(props) {
+  const projects = props.nodes
+    .filter(({ frontmatter }) => frontmatter.slug === "portfolio")
+    .map(
+      ({ frontmatter }) => {
+        return (
+          <div className="ml-2 mb-8 md:ml-5" key={frontmatter.title}>
+            <div className="text-xl">{frontmatter.title}</div>
+            <div className="text-md">{frontmatter.description}</div>
+          </div>
+        );
+      },
+      [props],
+    );
+
+return (
+
+<SoftwareSection section="portfolio">{projects}</SoftwareSection>
+); }

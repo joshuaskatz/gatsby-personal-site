@@ -1,16 +1,16 @@
-import Image from '../../components/image/Image.tsx'
+import Image from "../../components/image/Image.tsx";
 
-export default function Index({ index=0, className='', ...props }) {
-  if (!props.frontmatter) return null;
+export default function Index(props) {
+	if (!props.frontmatter) return null;
 
-return (
+    return (
 
-<div className={className} id={`${props.frontmatter.title.replace(' ', '_').toLowerCase()}`}>
-    <Image featuredImage={props.frontmatter.featuredImage} />
+    	<div  id={`${props.frontmatter.title.replace(" ", "_").toLowerCase()}`}>
+    		<Image featuredImage={props.frontmatter.featuredImage} />
 
-    <div className="ml-2 mb-8 md:ml-5 w-fit">
-        <div className="text-xl">{props.frontmatter.title}</div>
-    </div>
+    		<div className="ml-2 mb-8 md:ml-5 w-fit">
+    			<div className="text-xl">{props.frontmatter.title}</div>
+    		</div>
 
-</div>
-); }
+    	</div>
+    ); }
