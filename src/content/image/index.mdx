@@ -1,12 +1,12 @@
 import Image from '../../components/image/Image.tsx'
 import ImageText from '../../components/image/ImageText.tsx'
 
-export default function Index(props) {
+export default function Index({ index=0, className='', ...props }) {
   if (!props.frontmatter) return null;
 
 return (
 
-<div  id={`${props.frontmatter.title.replace(' ', '_').toLowerCase()}`}>
+<div className={className} id={`${props.frontmatter.title.replace(' ', '_').toLowerCase()}`}>
     <Image featuredImage={props.frontmatter.featuredImage} />
 
     <ImageText
