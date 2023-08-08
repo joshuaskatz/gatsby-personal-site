@@ -6,13 +6,11 @@ import { MDXProvider } from '@mdx-js/react'
 import MainNav from '../components/nav/main'
 import Sidebar from '../components/nav/sidebar'
 import { usePhotographyMdx } from '../hooks/usePhotographyMdx'
-import { useAboutMdx } from '../hooks/useAboutMdx'
 import { shortcodes } from '.'
 import SEO from '../components/seo'
 
-const Photography: React.FC<PageProps> = ({ location }) => {
+const Photography: React.FC<PageProps> = () => {
   const photographyMdx = usePhotographyMdx()
-  const aboutMdx = useAboutMdx()
 
   const photos = useMemo(() => {
     if (!photographyMdx) return null
@@ -28,7 +26,7 @@ const Photography: React.FC<PageProps> = ({ location }) => {
           <MDXProvider components={shortcodes}>{photos}</MDXProvider>
         </div>
         <div>
-          <Sidebar sections={photographyMdx.nodes.map(n => n.frontmatter.title)} aboutMdx={aboutMdx} />
+          <Sidebar sections={photographyMdx.nodes.map(n => n.frontmatter.title)} />
         </div>
       </div>
     </div>

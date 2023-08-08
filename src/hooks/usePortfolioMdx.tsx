@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 

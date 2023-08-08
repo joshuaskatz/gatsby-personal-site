@@ -9,14 +9,12 @@ import Portfolio from '../content/portfolio/index.mdx'
 
 import { MDXProvider } from '@mdx-js/react'
 import { useTechnologiesMdx } from '../hooks/useTechnologiesMdx'
-import { useAboutMdx } from '../hooks/useAboutMdx'
 import { usePortfolioMdx } from '../hooks/usePortfolioMdx'
 import SEO from '../components/seo'
 
-const SoftwareDev: React.FC<PageProps> = ({ location }) => {
+const SoftwareDev: React.FC<PageProps> = () => {
   const technologiesMdx = useTechnologiesMdx()
   const portfolioMdx = usePortfolioMdx()
-  const aboutMdx = useAboutMdx()
 
   return (
     <div>
@@ -29,7 +27,7 @@ const SoftwareDev: React.FC<PageProps> = ({ location }) => {
           </MDXProvider>
         </div>
         <div>
-          <Sidebar sections={['technologies', 'portfolio']} aboutMdx={aboutMdx} isSoftwareDev />
+          <Sidebar sections={['technologies', 'portfolio']} isSoftwareDev />
         </div>
       </div>
     </div>

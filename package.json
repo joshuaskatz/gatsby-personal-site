@@ -14,7 +14,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "lint": "eslint . --ext mdx"
+    "lint": "eslint . --ext mdx,tsx"
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",

@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import { ImageMdxNode } from '../../../hooks/usePhotographyMdx'
 import { withPrefix } from 'gatsby'
 interface SidebarProps {
   sections: string[]
