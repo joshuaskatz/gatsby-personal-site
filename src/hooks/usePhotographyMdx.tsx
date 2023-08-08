@@ -44,7 +44,7 @@ export const usePhotographyMdx = () => {
             sub
             featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 900)
+                gatsbyImageData(width: 1200)
               }
             }
           }
