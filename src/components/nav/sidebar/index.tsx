@@ -1,13 +1,11 @@
 import React, { useMemo } from 'react'
-import ImageMDX from '../../../content/sidebar/index.mdx'
 import { ImageMdxNode } from '../../../hooks/usePhotographyMdx'
-import { PageProps, withPrefix } from 'gatsby'
+import { withPrefix } from 'gatsby'
 interface SidebarProps {
   sections: string[]
-  aboutMdx: ImageMdxNode
 }
 
-export default function Sidebar({ sections, aboutMdx, isSoftwareDev }: SidebarProps & { isSoftwareDev?: boolean }) {
+export default function Sidebar({ sections, isSoftwareDev }: SidebarProps & { isSoftwareDev?: boolean }) {
   const anchorTags = useMemo(() => {
     return sections.map(s => {
       return (

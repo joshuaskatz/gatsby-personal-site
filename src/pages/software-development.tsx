@@ -11,6 +11,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { useTechnologiesMdx } from '../hooks/useTechnologiesMdx'
 import { useAboutMdx } from '../hooks/useAboutMdx'
 import { usePortfolioMdx } from '../hooks/usePortfolioMdx'
+import SEO from '../components/seo'
 
 const SoftwareDev: React.FC<PageProps> = ({ location }) => {
   const technologiesMdx = useTechnologiesMdx()
@@ -36,3 +37,5 @@ const SoftwareDev: React.FC<PageProps> = ({ location }) => {
 }
 
 export default SoftwareDev
+
+export const Head = () => <SEO />

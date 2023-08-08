@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Link, type PageProps, graphql, useStaticQuery } from 'gatsby'
+import { Link, type PageProps } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import ImageMDX from '../content/image/index.mdx'
 import Image from '../components/image/Image'

@@ -1,15 +1,14 @@
-import { Link, PageProps, graphql, useStaticQuery } from 'gatsby'
+import { PageProps } from 'gatsby'
 import { useMemo } from 'react'
 import * as React from 'react'
 import ImageMDX from '../content/image/index.mdx'
-import Image from '../components/image/Image'
-import ImageText from '../components/image/ImageText'
 import { MDXProvider } from '@mdx-js/react'
 import MainNav from '../components/nav/main'
 import Sidebar from '../components/nav/sidebar'
 import { usePhotographyMdx } from '../hooks/usePhotographyMdx'
 import { useAboutMdx } from '../hooks/useAboutMdx'
 import { shortcodes } from '.'
+import SEO from '../components/seo'
 
 const Photography: React.FC<PageProps> = ({ location }) => {
   const photographyMdx = usePhotographyMdx()
@@ -37,3 +36,5 @@ const Photography: React.FC<PageProps> = ({ location }) => {
 }
 
 export default Photography
+
+export const Head = () => <SEO />

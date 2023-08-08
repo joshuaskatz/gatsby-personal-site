@@ -1,6 +1,12 @@
 import React from 'react'
 
-export default function ImageText({ title, description, sub }: { title: string; description: string; sub?: string }) {
+interface ImageTextProps {
+  title: string
+  description: string
+  sub?: string
+}
+
+export default function ImageText({ title, description, sub }: ImageTextProps) {
   return (
     <div className="mx-2 mb-8 md:mx-5 w-fit">
       <div className="text-5xl font-light">{title}</div>
