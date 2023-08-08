@@ -9,13 +9,11 @@ import MainNav from '../components/nav/main'
 import Sidebar from '../components/nav/sidebar'
 import { usePhotographyMdx } from '../hooks/usePhotographyMdx'
 import { useAboutMdx } from '../hooks/useAboutMdx'
-import { useResumeMdx } from '../hooks/useResumeMdx'
 import { shortcodes } from '.'
 
-const Photography: React.FC<PageProps> = () => {
+const Photography: React.FC<PageProps> = ({ location }) => {
   const photographyMdx = usePhotographyMdx()
   const aboutMdx = useAboutMdx()
-  const resumeMdx = useResumeMdx()
 
   const photos = useMemo(() => {
     if (!photographyMdx) return null
@@ -25,7 +23,7 @@ const Photography: React.FC<PageProps> = () => {
 
   return (
     <div>
-      <MainNav publicUrl={resumeMdx.publicUrl} />
+      <MainNav />
       <div className="flex flex-row">
         <div className="max-w-940">
           <MDXProvider components={shortcodes}>{photos}</MDXProvider>

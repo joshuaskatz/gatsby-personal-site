@@ -8,13 +8,11 @@ import ImageText from '../components/image/ImageText'
 import MainNav from '../components/nav/main'
 import SEO from '../components/seo'
 import { useAboutMdx } from '../hooks/useAboutMdx'
-import { useResumeMdx } from '../hooks/useResumeMdx'
 
 export const shortcodes = { Link, ImageText, Image }
 
 const Index: React.FC<PageProps> = () => {
   const aboutMdx = useAboutMdx()
-  const resumeMdx = useResumeMdx()
 
   const header = useMemo(() => {
     return <ImageMDX className={`flex flex-col lg:flex-row`} {...aboutMdx} />
@@ -22,7 +20,7 @@ const Index: React.FC<PageProps> = () => {
 
   return (
     <div>
-      <MainNav publicUrl={resumeMdx.publicUrl} />
+      <MainNav />
       <MDXProvider components={shortcodes}>{header}</MDXProvider>
     </div>
   )
