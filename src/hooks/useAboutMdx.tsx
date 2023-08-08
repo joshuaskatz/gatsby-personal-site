@@ -18,7 +18,7 @@ export const useAboutMdx = () => {
           sub
           featuredImage {
             childImageSharp {
-              gatsbyImageData(width: 1000)
+              gatsbyImageData(width: 1200)
             }
           }
         }
