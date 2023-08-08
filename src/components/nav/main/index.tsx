@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, withPrefix } from 'gatsby'
-import { GiHamburgerMenu } from 'react-icons/gi'
 
 export default function MainNav() {
   return (
