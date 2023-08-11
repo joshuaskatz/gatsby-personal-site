@@ -2111,85 +2111,6 @@
     "@pnpm/network.ca-file" "^1.0.1"
     config-chain "^1.1.11"
 
-"@react-spring/animated@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/animated/-/animated-9.7.3.tgz"
-  integrity sha512-5CWeNJt9pNgyvuSzQH+uy2pvTg8Y4/OisoscZIR8/ZNLIOI+CatFBhGZpDGTF/OzdNFsAoGk3wiUYTwoJ0YIvw==
-  dependencies:
-    "@react-spring/shared" "~9.7.3"
-    "@react-spring/types" "~9.7.3"
-
-"@react-spring/core@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/core/-/core-9.7.3.tgz"
-  integrity sha512-IqFdPVf3ZOC1Cx7+M0cXf4odNLxDC+n7IN3MDcVCTIOSBfqEcBebSv+vlY5AhM0zw05PDbjKrNmBpzv/AqpjnQ==
-  dependencies:
-    "@react-spring/animated" "~9.7.3"
-    "@react-spring/shared" "~9.7.3"
-    "@react-spring/types" "~9.7.3"
-
-"@react-spring/konva@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/konva/-/konva-9.7.3.tgz"
-  integrity sha512-R9sY6SiPGYqz1383P5qppg5z57YfChVknOC1UxxaGxpw+WiZa8fZ4zmZobslrw+os3/+HAXZv8O+EvU/nQpf7g==
-  dependencies:
-    "@react-spring/animated" "~9.7.3"
-    "@react-spring/core" "~9.7.3"
-    "@react-spring/shared" "~9.7.3"
-    "@react-spring/types" "~9.7.3"
-
-"@react-spring/native@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/native/-/native-9.7.3.tgz"
-  integrity sha512-4mpxX3FuEBCUT6ae2fjhxcJW6bhr2FBwFf274eXB7n+U30Gdg8Wo2qYwcUnmiAA0S3dvP8vLTazx3+CYWFShnA==
-  dependencies:
-    "@react-spring/animated" "~9.7.3"
-    "@react-spring/core" "~9.7.3"
-    "@react-spring/shared" "~9.7.3"
-    "@react-spring/types" "~9.7.3"
-
-"@react-spring/shared@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/shared/-/shared-9.7.3.tgz"
-  integrity sha512-NEopD+9S5xYyQ0pGtioacLhL2luflh6HACSSDUZOwLHoxA5eku1UPuqcJqjwSD6luKjjLfiLOspxo43FUHKKSA==
-  dependencies:
-    "@react-spring/types" "~9.7.3"
-
-"@react-spring/three@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/three/-/three-9.7.3.tgz"
-  integrity sha512-Q1p512CqUlmMK8UMBF/Rj79qndhOWq4XUTayxMP9S892jiXzWQuj+xC3Xvm59DP/D4JXusXpxxqfgoH+hmOktA==
-  dependencies:
-    "@react-spring/animated" "~9.7.3"
-    "@react-spring/core" "~9.7.3"
-    "@react-spring/shared" "~9.7.3"
-    "@react-spring/types" "~9.7.3"
-
-"@react-spring/types@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/types/-/types-9.7.3.tgz"
-  integrity sha512-Kpx/fQ/ZFX31OtlqVEFfgaD1ACzul4NksrvIgYfIFq9JpDHFwQkMVZ10tbo0FU/grje4rcL4EIrjekl3kYwgWw==
-
-"@react-spring/web@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/web/-/web-9.7.3.tgz"
-  integrity sha512-BXt6BpS9aJL/QdVqEIX9YoUy8CE6TJrU0mNCqSoxdXlIeNcEBWOfIyE6B14ENNsyQKS3wOWkiJfco0tCr/9tUg==
-  dependencies:
-    "@react-spring/animated" "~9.7.3"
-    "@react-spring/core" "~9.7.3"
-    "@react-spring/shared" "~9.7.3"
-    "@react-spring/types" "~9.7.3"
-
-"@react-spring/zdog@~9.7.3":
-  version "9.7.3"
-  resolved "https://registry.npmjs.org/@react-spring/zdog/-/zdog-9.7.3.tgz"
-  integrity sha512-L+yK/1PvNi9n8cldiJ309k4LdxcPkeWE0W18l1zrP1IBIyd5NB5EPA8DMsGr9gtNnnIujtEzZk+4JIOjT8u/tw==
-  dependencies:
-    "@react-spring/animated" "~9.7.3"
-    "@react-spring/core" "~9.7.3"
-    "@react-spring/shared" "~9.7.3"
-    "@react-spring/types" "~9.7.3"
-
 "@sideway/address@^4.1.3":
   version "4.1.4"
   resolved "https://registry.npmjs.org/@sideway/address/-/address-4.1.4.tgz"
@@ -4445,11 +4366,6 @@ date-fns@^2.30.0:
   integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
   dependencies:
     "@babel/runtime" "^7.21.0"
-
-debounce@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"
-  integrity sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==
 
 debug@2, debug@2.6.9, debug@^2.6.0:
   version "2.6.9"
@@ -10045,11 +9961,6 @@ react-helmet@^6.1.0:
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
 
-react-icons@^4.10.1:
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.10.1.tgz#3f3b5eec1f63c1796f6a26174a1091ca6437a500"
-  integrity sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==
-
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -10073,25 +9984,6 @@ react-side-effect@^2.1.0:
   version "2.1.2"
   resolved "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.2.tgz"
   integrity sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw==
-
-react-spring@^9.7.2:
-  version "9.7.2"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-9.7.2.tgz#218360d0ca53d04d8faac984f0d8683819b967b4"
-  integrity sha512-cckALtj79yiaJiAOUNAhtZbdqjvv1bdn/FpobgkckIChc8l6vu0E53WQ+zWru60gINI3JT+oRJSIn2hUVlOvlQ==
-  dependencies:
-    "@react-spring/core" "~9.7.3"
-    "@react-spring/konva" "~9.7.3"
-    "@react-spring/native" "~9.7.3"
-    "@react-spring/three" "~9.7.3"
-    "@react-spring/web" "~9.7.3"
-    "@react-spring/zdog" "~9.7.3"
-
-react-use-measure@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-use-measure/-/react-use-measure-2.1.1.tgz#5824537f4ee01c9469c45d5f7a8446177c6cc4ba"
-  integrity sha512-nocZhN26cproIiIduswYpV5y5lQpSQS1y/4KuvUCjSKmw7ZWIS/+g3aFnX3WdBkyuGUtTLif3UTqnLLhbDoQig==
-  dependencies:
-    debounce "^1.2.1"
 
 react@^18.2.0:
   version "18.2.0"

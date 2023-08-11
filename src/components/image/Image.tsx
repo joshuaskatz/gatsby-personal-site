@@ -11,7 +11,7 @@ export default function Image({ featuredImage }: ImageProps) {
   const featuredImg = getImage(featuredImage.childImageSharp.gatsbyImageData) as IGatsbyImageData
 
   return (
-    <div className="m-2 md:mx-5">
+    <div className="m-2 md:mx-5 max-w-940">
       <GatsbyImage image={featuredImg} alt="alt" />
     </div>
   )
