@@ -1,7 +1,7 @@
 ---
 title: Joshua Katz
 description: Photographer/Software Developer
-sub: Philadelphia, PA
+sub: joshua.samuel.katz@gmail.com
 featuredImage: ./header.jpg
 slug: about
 ---
