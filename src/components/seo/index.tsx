@@ -24,7 +24,9 @@ export default function SEO({ children }: PropsWithChildren) {
       <meta name="og:url" content={seo.url} />
       <meta name="og:description" content={seo.description} />
       <meta name="og:image" content={seo.image} />
-
+      <meta http-equiv="cache-control" content="no-cache" />
+      <meta http-equiv="expires" content="0" />
+      <meta http-equiv="pragma" content="no-cache" />
       {children}
     </Helmet>
   )
