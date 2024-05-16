@@ -13,9 +13,9 @@ export default function Index(props) {
             return  (
               <div className="ml-2 mb-8 md:ml-5" key={frontmatter.title}>
                 <div className="text-xl">{frontmatter.title}</div>
-                <a target="_blank" rel="noopener noreferrer" href={website1} className="underline">{website1}</a>
+                <a target="_blank" rel="noopener noreferrer" href={website1} className="underline hover:text-blue-500">{website1}</a>
                 <br/>
-                <a target="_blank" rel="noopener noreferrer" href={website2} className="underline">{website2}</a>
+                <a target="_blank" rel="noopener noreferrer" href={website2} className="underline hover:text-blue-500">{website2}</a>
                 <div className="text-md">{frontmatter.sub}</div>
                 <ul>{frontmatter.descriptionArray.map((d, i)=><li key={i} className="text-md">{d}</li>)}</ul>
               </div>
@@ -25,7 +25,7 @@ export default function Index(props) {
         return (
           <div className="ml-2 mb-8 md:ml-5" key={frontmatter.title}>
             <div className="text-xl">{frontmatter.title}</div>
-            <a target="_blank" rel="noopener noreferrer" href={frontmatter.website} className="underline">{frontmatter.website}</a>
+            <a target="_blank" rel="noopener noreferrer" href={frontmatter.website} className="underline hover:text-blue-500">{frontmatter.website}</a>
             <div className="text-md">{frontmatter.sub}</div>
             <ul>{frontmatter.descriptionArray.map((d, i)=><li key={i} className="text-md">{d}</li>)}</ul>
           </div>
